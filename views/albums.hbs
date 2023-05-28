@@ -1,0 +1,12 @@
+<h1>Albums</h1>
+<div class="container">
+  <div class="card">{{#each albums}}
+      {{#each images}}
+        {{#if @first}}
+          <img style="width: 200px;" src="{{this.url}}" alt="" />
+        {{/if}}
+      {{/each}}
+      <h1>{{name}}</h1>
+      <a href="/tracks-info/{{id}}"><button>View tracks</button></a>
+    {{/each}}</div>
+</div>
