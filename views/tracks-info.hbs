@@ -1,9 +1,14 @@
-<h1>Tracks information</h1>
-<div class="container">
-{{#each tracks}}
-  <div class="col-12 row">
-    <h5 class="col-4">{{name}}</h5>
-    <audio class="col-8" controls src="{{preview_url}}"></audio>
+<h1 class="newh1">Tracks for album</h1>
+<h2 class="newh2">{{albumName}}</h2>
+
+<div class="outSideContainer">
+  <div class="TrackContainer">
+    {{#each tracks}}
+      <div class="track-card">
+        <h3 class="newh3">{{name}}</h3>
+        <audio controls src="{{preview_url}}"></audio>
+      </div>
+    {{/each}}
   </div>
-{{/each}}
+
 </div>

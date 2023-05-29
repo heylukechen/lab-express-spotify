@@ -1,0 +1,178 @@
+@import url("https://use.typekit.net/bdh0mbv.css");
+* {
+  font-family: "muli", sans-serif;
+}
+
+body {
+  background-image: url("/images/landing.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bigContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  background-color: rgb(255, 255, 255, 0.86);
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.input-box {
+  border: solid 1px #888888;
+  border-radius: 0.2rem;
+  height: 2.5rem;
+  margin-bottom: 1.5rem;
+  width: 24rem;
+}
+
+.primary-btn {
+  height: 2.5rem;
+  width: 24rem;
+  border-radius: 0.2rem;
+  color: #ffffff;
+  border: none;
+  background-color: #1ab26b;
+}
+
+.primary-btn:hover {
+  background-color: #107445;
+}
+
+.mini-logo {
+  height: 1.2rem;
+  width: auto;
+  object-fit: contain;
+}
+
+.small-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  margin-top: 2rem;
+}
+
+.combined-line {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+}
+
+.small-footer p {
+  color: #666666;
+}
+
+.small-footer img {
+  margin-left: 0.25rem;
+}
+
+.newh1 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin: 4.5rem 0 1rem 0;
+}
+
+.newh2 {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.secondContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1.5rem;
+  margin: 0 6rem 6rem 6rem;
+  gap: 1rem;
+  background-color: rgb(255, 255, 255, 0.3);
+}
+
+.artist-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  width: 24%;
+  /* margin: 1rem; */
+  background-color: #ffffff;
+}
+
+.artist-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.artist-card .newh1 {
+  margin-top: 1.2rem;
+  font-size: 1rem;
+  white-space: nowrap; /* Keeps the text on a single line */
+  overflow: hidden; /* Hides the overflow text */
+  text-overflow: ellipsis; /* Shows "..." to represent the clipped text */
+  text-align: left;
+  color: #333333;
+}
+
+.secondary-btn {
+  height: 2.5rem;
+  width: 100%;
+  border-radius: 0.2rem;
+  color: #1ab26b;
+  border: 1px solid #1ab26b;
+  background-color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.secondary-btn:hover {
+  background-color: #dae4df;
+}
+
+.TrackContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+  margin: 0 6rem 6rem 6rem;
+  gap: 1rem;
+  background-color: rgb(255, 255, 255, 0.3);
+}
+
+.outSideContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.track-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  align-items: center;
+}
+
+.newh3 {
+  text-align: left;
+}

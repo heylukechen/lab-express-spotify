@@ -1,6 +1,21 @@
-<form action="/artist-search" method="GET">
+<div class="bigContainer">
+  <div class="card">
+    <h1>Search for an artist</h1>
+    <form class="box" action="/artist-search" method="GET">
+      <input
+        class="input-box"
+        type="search"
+        name="searchArtistName"
+        placeholder="Artist's name"
+      />
+      <button class="primary-btn" type="submit">Search</button>
+    </form>
+    <div class="small-footer">
+      <p>Made by Luke Chen</p>
+      <div class="combined-line">
+        <p>API provided by</p>
+        <img class="mini-logo" src="/images/spotify-logo.png" alt="" /></div>
+    </div>
 
-  <input type="search" name="searchArtistName" placeholder="Artist's name" />
-  <button type="submit">Search for an artist</button>
-
-</form>
+  </div>
+</div>
