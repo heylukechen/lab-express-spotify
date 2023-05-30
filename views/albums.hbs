@@ -1,14 +1,17 @@
 <h1 class="newh1">Albums for</h1>
-<h2 class="newh2">{{artistName}}</h2>
-
+<h2 class="newh2">{{albums.0.artists.0.name}}</h2>
 <div class="secondContainer">
   {{#each albums}}
     <div class="artist-card">
-      {{#each images}}
-        {{#if @first}}
-          <img src="{{this.url}}" alt="" />
-        {{/if}}
-      {{/each}}
+      {{#if images}}
+        {{#each images}}
+          {{#if @first}}
+            <img src="{{this.url}}" alt="" />
+          {{/if}}
+        {{/each}}
+      {{else}}
+        <img src="/images/default-blank.png" alt="" />
+      {{/if}}
       <h1 class="newh1">{{name}}</h1>
       <a href="/tracks-info/{{id}}"><button class="secondary-btn">View tracks</button></a>
     </div>

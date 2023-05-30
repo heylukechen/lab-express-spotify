@@ -38,6 +38,7 @@ app.get("/artist-search", (req, res) => {
   spotifyApi
     .searchArtists(req.query.searchArtistName)
     .then((data) => {
+        console.log(data.body.artists.items[5]);
       //console.log("The received data from the API: ", data.body.artists);
       res.render("artist-search-results", {
         artists: data.body.artists.items,
@@ -50,14 +51,12 @@ app.get("/artist-search", (req, res) => {
 });
 
 app.get("/albums/:artistId", (req, res, next) => {
-  Promise.all([
-    spotifyApi.getArtist(req.params.artistId),
-    spotifyApi.getArtistAlbums(req.params.artistId),
-  ])
-    .then(([data, artistAlbum]) => {
-      const artistName = data.body.name;
+  spotifyApi
+    .getArtistAlbums(req.params.artistId)
+    .then((artistAlbum) => {
+      //   const artistName = artistAlbum.body.items[0].artists[0].name;
       const albums = artistAlbum.body.items;
-      res.render("albums", { albums: albums, artistName: artistName });
+      res.render("albums", { albums: albums });
     })
     .catch((err) => console.log(err));
 });
@@ -76,21 +75,22 @@ app.get("/tracks-info/:albumId", (req, res, next) => {
       });
     })
     .catch((err) => console.log(err));
-  //console.log(req.params);
-  //   let albumName;
-  //   spotifyApi
-  //     .getAlbum(req.params.albumId)
-  //     .then((data) => {
-  //       albumName = data.body.name;
-  //     })
-  //     .catch((err) => console.log(err));
-
-  //   let tracks;
-  //   spotifyApi
-  //     .getAlbumTracks(req.params.albumId)
-  //     .then((data) => {
-  //       //console.log(data);
-  //       tracks = data.body.items;
-  //     })
-  //     .catch((err) => console.log("The error while search albums: ", err));
 });
+
+//console.log(req.params);
+//   let albumName;
+//   spotifyApi
+//     .getAlbum(req.params.albumId)
+//     .then((data) => {
+//       albumName = data.body.name;
+//     })
+//     .catch((err) => console.log(err));
+
+//   let tracks;
+//   spotifyApi
+//     .getAlbumTracks(req.params.albumId)
+//     .then((data) => {
+//       //console.log(data);
+//       tracks = data.body.items;
+//     })
+//     .catch((err) => console.log("The error while search albums: ", err));

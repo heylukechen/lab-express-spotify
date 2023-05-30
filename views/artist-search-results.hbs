@@ -1,14 +1,17 @@
 <h1 class="newh1">Search results for</h1>
 <h2 class="newh2">{{SearchedTerms}}</h2>
-
 <div class="secondContainer">
   {{#each artists}}
     <div class="artist-card">
-      {{#each images}}
-        {{#if @first}}
-          <img src="{{this.url}}" alt="" />
-        {{/if}}
-      {{/each}}
+      {{#if images}}
+        {{#each images}}
+          {{#if @first}}
+            <img src="{{this.url}}" alt="" />
+          {{/if}}
+        {{/each}}
+      {{else}}
+        <img src="/images/default-blank.png" alt="" />
+      {{/if}}
       <h1 class="newh1">{{name}}</h1>
       <a href="/albums/{{id}}"><button class="secondary-btn">View albums</button></a>
     </div>
