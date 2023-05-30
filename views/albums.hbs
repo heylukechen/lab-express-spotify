@@ -13,6 +13,10 @@
         <img src="/images/default-blank.png" alt="" />
       {{/if}}
       <h1 class="newh1">{{name}}</h1>
+      <ul>
+        <li>Release date: <span>{{release_date}}</span></li>
+        <li>Ttoal tracks: <span>{{total_tracks}}</span></li>
+      </ul>
       <a href="/tracks-info/{{id}}"><button class="secondary-btn">View tracks</button></a>
     </div>
   {{/each}}

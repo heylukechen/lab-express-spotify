@@ -38,7 +38,7 @@ app.get("/artist-search", (req, res) => {
   spotifyApi
     .searchArtists(req.query.searchArtistName)
     .then((data) => {
-        console.log(data.body.artists.items[5]);
+      //console.log(data.body.artists.items[0].followers.total);
       //console.log("The received data from the API: ", data.body.artists);
       res.render("artist-search-results", {
         artists: data.body.artists.items,
@@ -54,6 +54,7 @@ app.get("/albums/:artistId", (req, res, next) => {
   spotifyApi
     .getArtistAlbums(req.params.artistId)
     .then((artistAlbum) => {
+        console.log(artistAlbum.body.items[0])
       //   const artistName = artistAlbum.body.items[0].artists[0].name;
       const albums = artistAlbum.body.items;
       res.render("albums", { albums: albums });

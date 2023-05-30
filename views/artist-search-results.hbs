@@ -13,6 +13,10 @@
         <img src="/images/default-blank.png" alt="" />
       {{/if}}
       <h1 class="newh1">{{name}}</h1>
+      <ul>
+        <li>Followers: <span>{{followers.total}}</span></li>
+        <li>Popularity: <span>{{popularity}}</span></li>
+      </ul>
       <a href="/albums/{{id}}"><button class="secondary-btn">View albums</button></a>
     </div>
   {{/each}}

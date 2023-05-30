@@ -133,6 +133,15 @@ h1 {
   color: #333333;
 }
 
+.artist-card > ul > li > span {
+  font-weight: 600;
+  color: #1ab26b;
+}
+
+.artist-card > ul {
+  margin-bottom: 1.5rem;
+}
+
 .secondary-btn {
   height: 2.5rem;
   width: 100%;
